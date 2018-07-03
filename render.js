@@ -4,7 +4,7 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:13-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-07-02T19:36:33-07:00
+ * @Last modified time: 2018-07-02T20:36:24-07:00
  * @Version: 1.0
  */
 
@@ -62,7 +62,7 @@ function render(){
   renderSnake();
   renderFruit();
 
-  setTimeout(render, 17);
+  setTimeout(render, 15);
 }
 
 render();

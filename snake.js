@@ -4,7 +4,7 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:09-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-07-02T19:36:36-07:00
+ * @Last modified time: 2018-07-02T20:38:32-07:00
  * @Version: 1.0
  */
 
@@ -15,7 +15,7 @@ var COLS = 50;
 
 var snake = [];
 var SNAKE_INITIAL_LENGTH = 5;
-var speed = {
+var speed = { //initial direction
   x: 1,
   y: 0
 };
@@ -93,7 +93,7 @@ function integrate(){
 
   }
 
-  setTimeout(integrate, GAME_SPEED);
+  setTimeout(integrate, 100);
 }
 
 init();
