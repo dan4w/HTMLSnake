@@ -4,14 +4,14 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:09-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-07-02T20:38:32-07:00
+ * @Last modified time: 2018-07-03T02:47:39-07:00
  * @Version: 1.0
  */
 
 
-
-var ROWS = 50;
-var COLS = 50;
+// Number of "cells" for the game
+var ROWS = 30;
+var COLS = 30;
 
 var snake = [];
 var SNAKE_INITIAL_LENGTH = 5;
@@ -19,10 +19,10 @@ var speed = { //initial direction
   x: 1,
   y: 0
 };
-var GAME_SPEED = 100;
+var GAME_SPEED = 120; // milliseconds before snake moves
 var playing = true;
 var fruit;
-var newSpeed = false;
+var newSpeed = false; // direction check
 
 function newFruit(){
   do {
@@ -93,7 +93,7 @@ function integrate(){
 
   }
 
-  setTimeout(integrate, 100);
+  setTimeout(integrate, GAME_SPEED);
 }
 
 init();

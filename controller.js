@@ -5,19 +5,26 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:18-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-07-02T19:36:33-07:00
+ * @Last modified time: 2018-07-03T14:07:33-07:00
  * @Version: 1.0
  */
 
+var keyState = {};
+
+//Without both onkeyup and onkeydown, inputting 2 keys really quick won't register one of them
+window.onkeyup = window.onkeydown = function (e){
+  e = e || event;
+  keyState[e.keyCode] = e.type == 'keydown';
 
 
-document.onkeydown = function (e){
   var keys = {
     37: 'left',
     38: 'up',
     39: 'right',
-    40: 'down'
+    40: 'down',
+    27: 'restart'
   }
+
   var dx = 0;
   var dy = 0;
 
@@ -33,6 +40,11 @@ document.onkeydown = function (e){
       break;
     case 'right':
       dx = 1;
+      break;
+    case 'restart':
+      console.log("WOW");
+      render();
+      init();
       break;
     default:
       return;
