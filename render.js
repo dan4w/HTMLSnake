@@ -5,7 +5,7 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:13-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-09-24T19:13:44-07:00
+ * @Last modified time: 2018-09-24T22:04:43-07:00
  * @Version: 1.0.1
  */
 
@@ -78,10 +78,7 @@ function renderFruit(){
   var xx3 = transformX(fruit.x); //transforms from COLS to x pixel values
   var yy3 = transformY(fruit.y); //transforms from ROWS to y pixel values
 
-  fruit_image.onload = function(){
-      ctx.drawImage(fruit_image,xx3-2,yy3-2,BOX_W+3,BOX_H+3)  //(image, x-pos,y-pos,x-size,y-size) x-pos and y-pos are offset to centre
-    }
-    fruit_image.src = 'Icons/apple.png'; //Picture for the fruit
+  ctx.drawImage(fruit_image,xx3-2,yy3-2,BOX_W+3,BOX_H+3)  //(image, x-pos,y-pos,x-size,y-size) x-pos and y-pos are offset to centre
 }
 
 
