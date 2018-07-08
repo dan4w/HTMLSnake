@@ -4,7 +4,7 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:09-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-09-24T19:12:42-07:00
+ * @Last modified time: 2018-09-24T23:09:19-07:00
  * @Version: 1.0.1
  */
 
@@ -73,14 +73,12 @@ function integrate(){
 
   if( newSpeed !== false){
 
-    speed = keyQueue[0]; // Set the direction of the next tick
+    speed = newSpeed; // Set the direction of the next tick
     newSpeed = false;
     /* If the queue has more than 1 keypress queued, then remove until 1 key press left in queue
     * this is to go through all the keypresses in case user presses multiple keys with little delay
     */
-    if(keyQueue.length >= 1){
-      keyQueue.shift();  //remove first element
-    }
+
   }
 
   var dx = speed.x; //will be 1,0 or -1

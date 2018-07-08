@@ -5,15 +5,16 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:18-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-09-24T16:46:33-07:00
+ * @Last modified time: 2018-09-24T23:25:01-07:00
  * @Version: 1.0.1
  */
 
 var keyState = {};
-var keyQueue = [];
 
+console.log("control loaded");
 //Controls for the snake
-window.onkeypress = function (e){ // Action based on keydown
+window.onkeydown = function (e){ // Action based on keydown
+console.log("Preseed");
   e = e || event;
   keyState[e.keyCode] = e.type == 'keydown';
   e.preventDefault();
@@ -72,8 +73,5 @@ window.onkeypress = function (e){ // Action based on keydown
     x: dx,
     y: dy
   };
-
-  keyQueue.push(newSpeed);
-  console.log("test")
 
 };
