@@ -5,7 +5,7 @@
  * @Author: Daniel Forwood
  * @Date:   2018-06-29T19:13:18-07:00
  * @Last modified by:   Daniel Forwood
- * @Last modified time: 2018-07-03T14:07:33-07:00
+ * @Last modified time: 2018-07-03T14:18:01-07:00
  * @Version: 1.0
  */
 
@@ -15,7 +15,7 @@ var keyState = {};
 window.onkeyup = window.onkeydown = function (e){
   e = e || event;
   keyState[e.keyCode] = e.type == 'keydown';
-
+  e.preventDefault();
 
   var keys = {
     37: 'left',
